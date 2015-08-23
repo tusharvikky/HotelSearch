@@ -1,0 +1,104 @@
+body{margin:0; padding:0; background:#f8f8f8; font-family:'proxima_nova_rgregular', Arial, Helvetica, sans-serif; font-size:15px; color:#666666;}
+
+@font-face {font-family:'proxima_nova_rgregular';
+    src: url('../fonts/proximanova-regular-webfont.eot');
+    src: url('../fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-regular-webfont.woff') format('woff'),
+         url('../fonts/proximanova-regular-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+	
+@font-face {font-family:'proxima_novasemibold';
+    src: url('../fonts/proximanova-semibold-webfont.eot');
+    src: url('../fonts/proximanova-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/proximanova-semibold-webfont.woff') format('woff'),
+         url('../fonts/proximanova-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+
+strong{font-family:'proxima_novasemibold'; font-weight:normal}
+
+/*** COMMON CSS ***/
+#main{margin:40px auto; width:940px;}
+img{border:0;}
+ul, h1, h2, h3, h4, h5{margin:0; padding:0; line-height:normal; width:100%; font-weight:normal}
+ul li{list-style:none; float:left;}
+
+*:focus {outline:0;}
+
+.details_holder{ width:860px; float:left; background:#fff; padding:40px;}
+
+/*** HEADER ****/
+.header{ width:940px; float:left;}
+.logo{ width:890px; float:left; background:#32383d; padding:0 0 0 50px;}
+.search_holder{ width:870px; float:left; background:#e4f1f4; padding:9px 35px;}
+.search_holder input, select{ border:0; height:41px; padding:0 10px; background:#fff; color:#4d4d4d; font-size:16px; font-family:Arial, Helvetica, sans-serif; -moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px; width:305px; margin:0 5px;font-family:'proxima_novasemibold'; float:left}
+.search_holder input.calendar{background:url(../images/calendar.png) no-repeat 92px 10px #fff; padding:0 30px 0 10px; width:81px;}
+/*.search_holder select{padding:10px 5px; height:auto; width:auto;}*/
+.search_holder input.btn_style{border:0; padding:0; height:41px; width:141px; cursor:pointer; background:url(../images/search.png) no-repeat 0 0; float:right;}
+
+.main_content{ width:620px; float:left; padding:0 0 0 30px; border-left:1px solid #f1f1f1;}
+
+.product_container{width:100%; float:left; padding:0 0 40px 0;}
+.tab_holder{width:100%; float:left; border-bottom:1px solid #f1f1f1; font-size:16px; font-weight:bold; color:#afafaf;}
+.tab_holder img{float:left; margin:0 10px 0 0;}
+.tab_holder span{float:left;}
+.tab_holder span.color{color:#008765;}
+.tab_holder strong{color:#4d4d4d; font-size:20px;}
+.tab_holder .tab_text{width:auto; float:left; padding:0 15px; border-right:1px solid #f1f1f1;}
+.prd_img{ width:290px; float:left; padding:15px 0 0 0;}
+.prd_text{width:330px; float:left; padding:15px 0 0 0;}
+.prd_text .text1{width:100%; float:left; padding:0 0 40px 0; font-size:14px; color:#4d4d4d;}
+.prd_text .text1 strong{font-size:24px;}
+.prd_text .text1 span{float:right; font-size:32px; color:#00c593; font-weight:bold;}
+.prd_text .text2{width:100%; float:left;}
+
+.tab2_container{width:590px; height:155px; padding:20px 0 0 30px; background:url(../images/box.png) no-repeat 0 0; float:left; margin-top:15px;}
+.tab2_container ul li{ width:160px; float:left; margin:0 30px 0 0; color:#346882;}
+.tab2_container ul li .text_holder{ width:100%; float:left; font-size:14px; height:70px;}
+.tab2_container ul li .img_text{ width:100%; float:left; font-size:12px;}
+.tab2_container ul li .img_text img{float:left; margin:0 10px 0 0;}
+.tab2_container ul li .img_text strong{font-size:16px;}
+
+.review_text{width:100%; float:left; padding:15px 0 0 0;}
+.review_text .text_holder{width:100%; float:left; padding:0 0 10px 0;}
+.review_text .text_holder .text1{width:70px; float:left; font-size:24px; color:#008765; padding:15px 0 0 0;}
+.review_text .text_holder .text2{width:70px; float:left;}
+.review_text .text_holder .text3{width:480px; float:left;}
+.review_text .text_holder .text3 span{color:#00c593; font-size:30px; font-weight:bold; float:right;}
+.review_text .text_holder .text3 a{color:#008765; text-decoration:none; float:right; font-weight:bold;}
+
+.sidebar{ width:165px; float:left; padding:0 35px 0 0;font-family:'proxima_novasemibold';}
+.sidebar h2{font-size:24px; color:#4d4d4d; padding:0 0 15px 0;font-family:'proxima_novasemibold';}
+.sidebar_text{width:100%; float:left; padding:0 0 50px 0; font-size:15px; color:#4d4d4d;}
+.sidebar_text img{margin:0 12px 0 0;}
+.sidebar_text select{border:1px solid #dadada; padding:10px 5px 5px 5px; font-size:16px; color:#4d4d4d; -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; width:80%;font-family:'proxima_novasemibold';}
+fieldset {width:165px; float:left; border:0; padding:0;}
+/*	wrapper divs */
+.custom-checkbox{width:165px; float:left;position:relative;}
+/* input, label positioning */
+.custom-checkbox input{position:absolute;margin:0 5px 0 0; z-index:0;}
+.custom-checkbox label{display:block;position:relative;z-index:1; width:130px; cursor:pointer; padding:4px 0 8px 30px;}
+/* states */
+.custom-checkbox label { background:url(../images/checkbox.png) no-repeat; }
+.custom-checkbox label, .custom-radio label {background-position:-10px -14px;}
+.custom-checkbox label.hover,.custom-checkbox label.focus,.custom-radio label.hover,.custom-radio label.focus {background-position:-10px -114px;}
+.custom-checkbox label.checked, .custom-radio label.checked {background-position:-10px -214px;}
+.custom-checkbox label.checkedHover, .custom-checkbox label.checkedFocus {background-position:-10px -314px;}
+.custom-checkbox label.focus, .custom-radio label.focus {outline:1px dotted #ccc;}
+
+.selectDark{float:left;}
+.passiveSelect{color:#666; width:121px;height:42px; float:left;cursor:pointer; background:url(../images/select-bar.png) no-repeat 0 0;}
+.selectDark ul{padding:0;margin:10px 0 0 0;list-style:none;cursor:pointer; background:#f1f1f1;width:121px; overflow:hidden; -moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px;}
+.selectDark ul li{color:#aeaeae; width:90%; padding:0 0 0 10%; float:left; color:#333; line-height:30px;}
+.activeSelect{color:#666; width:110px; height:30px; padding:12px 0 0 11px; float:left;cursor:pointer; background:url(../images/select-bar.png) no-repeat 0 0;}
+*:focus {outline:0;}
+
+
+
+
+
+
+
