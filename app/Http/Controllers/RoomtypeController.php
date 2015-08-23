@@ -19,12 +19,16 @@ class RoomtypeController extends Controller
     {
         $inputs = $request->all();
 
-        $room_types = RoomType::where('city', $inputs['city'])
-                                ->where('max_occupancy', '>=' , $inputs['guests']);
+        $room_types = RoomType::where('city', 'LIKE', '%'.$inputs['city'].'%');
+        $room_types = $room_types->where('max_occupancy', '>=' , (int) $inputs['guests']);
         
         if ($request->has('price')) {
             $pr = explode(';', $inputs['price']);
             $room_types = $room_types->whereBetween('base_price', $pr);
+        }
+
+        if ($request->has('type')) {
+            $room_types = $room_types->whereIn('room_type', $inputs['type']);
         }
 
         if ($request->has('rating')) {
@@ -40,17 +44,13 @@ class RoomtypeController extends Controller
                         $room_types = $room_types->whereBetween('rating', [80,85]);
                         break ;
                     case '3' :
-                        $room_types = $room_types->where('rating', '<', 80);
+                        $room_types = $room_types->having('rating', '<', 80);
                         break ;
                 }
 
             }
         }
-
-        if ($request->has('type')) {
-            $room_types = $room_types->whereIn('room_type', $inputs['type']);
-        }
-
+        // dd($room_types);
         $room_types = $room_types->get()->toArray();
 
         return \Response::json($room_types);

@@ -93,12 +93,12 @@ $.ajaxPrefilter(function(options, originalOptions, jqXHR) {
                 rating.push($(this).val());
         });
 
-        this.collection.fetch({
+        this.collection.fetch({ 
             data: {
-                city: that.city.val(),
-                nights: that.nights.val(),
-                guests: that.guests.val(),
-                price: that.price.val(),
+                city: $('input[name="city"]').val(),
+                nights: $('select[name="nights"] option:selected').val(),
+                guests: $('select[name="guests"] option:selected').val(),
+                price: $('input[name="price"]').val(),
                 type: type,
                 rating: rating,
             },
